@@ -84,7 +84,7 @@ export function AddEditStockForm() {
                 <Input placeholder="AAPL" {...field} />
               </FormControl>
               <FormDescription>
-                Enter the stock's ticker symbol.
+                'Enter the stocks ticker symbol.
               </FormDescription>
               <FormMessage />
             </FormItem>
