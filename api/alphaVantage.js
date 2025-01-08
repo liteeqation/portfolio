@@ -14,8 +14,6 @@ export const fetchStockData = async (symbol, interval = '5min') => {
                 apikey: API_KEY,
             },
         });
-
-        // Log the full API response to inspect its structure
         console.log('API Response:', response.data); // Add this line to see full response
 
         // Check if there are any error messages in the response
