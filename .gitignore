@@ -34,3 +34,64 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Node.js dependencies
+/node_modules
+
+# Build output
+/.next/
+/out/
+/build
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE and editor files
+/.idea/
+/.vscode/
+/*.sublime-project
+/*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Java and Maven files
+*.class
+*.jar
+*.war
+*.ear
+*.log
+target/
+*.iml
+
+# IntelliJ IDEA files
+*.ipr
+*.iws
+*.idea/
+
+# Coverage reports
+/coverage
+
+# Other
+*.pem
+*.p12
+*.pfx
+*.key
+*.crt
+*.csr
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
