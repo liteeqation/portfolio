@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
+import { useState } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
   stockName: z.string().min(2, {
@@ -30,10 +30,10 @@ const formSchema = z.object({
   buyPrice: z.number().positive({
     message: "Buy price must be a positive number.",
   }),
-})
+});
 
 export function AddEditStockForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,16 +43,16 @@ export function AddEditStockForm() {
       quantity: 1,
       buyPrice: 0,
     },
-  })
+  });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     // Simulate API call
     setTimeout(() => {
-      console.log(values)
-      setIsSubmitting(false)
-      form.reset()
-    }, 2000)
+      console.log(values);
+      setIsSubmitting(false);
+      form.reset();
+    }, 2000);
   }
 
   return (
@@ -84,7 +84,7 @@ export function AddEditStockForm() {
                 <Input placeholder="AAPL" {...field} />
               </FormControl>
               <FormDescription>
-                Enter the stocks ticker symbol.
+                Enter the stock's ticker symbol.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -136,6 +136,8 @@ export function AddEditStockForm() {
         </Button>
       </form>
     </Form>
-  )
+  );
 }
+
+
 
